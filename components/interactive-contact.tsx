@@ -149,7 +149,7 @@ export default function InteractiveContact() {
               whileHover={{ x: 5 }}
             >
               <motion.div
-                className={`p-3 ${contact.color} rounded-lg`}
+                className={`p-3 ${contact.color} rounded-2xl`}
                 animate={{
                   scale: activeContact === index ? [1, 1.1, 1] : 1,
                   rotate: activeContact === index ? [0, 5, -5, 0] : 0,
@@ -221,7 +221,7 @@ export default function InteractiveContact() {
                 id="name"
                 name="name"
                 placeholder="Name"
-                className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500"
+                className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500 rounded-2xl"
                 value={formState.name}
                 onChange={handleInputChange}
                 onFocus={() => setFocusedField("name")}
@@ -237,7 +237,7 @@ export default function InteractiveContact() {
                 name="email"
                 type="email"
                 placeholder="User@example.com"
-                className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500"
+                className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500 rounded-2xl"
                 value={formState.email}
                 onChange={handleInputChange}
                 onFocus={() => setFocusedField("email")}
@@ -254,7 +254,7 @@ export default function InteractiveContact() {
               id="subject"
               name="subject"
               placeholder="Project Inquiry"
-              className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500"
+              className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500 rounded-2xl"
               value={formState.subject}
               onChange={handleInputChange}
               onFocus={() => setFocusedField("subject")}
@@ -270,7 +270,7 @@ export default function InteractiveContact() {
               id="message"
               name="message"
               placeholder="I'd like to discuss a project..."
-              className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500"
+              className="bg-[#1a1a2e] border-gray-700 focus:border-purple-500 rounded-2xl"
               rows={6}
               value={formState.message}
               onChange={handleInputChange}
@@ -288,7 +288,7 @@ export default function InteractiveContact() {
           >
             <Button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 rounded-2xl"
             >
               <Send className="w-4 h-4 mr-2" />
               {loading ? "Sending..." : "Send Message"}
