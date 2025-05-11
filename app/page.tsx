@@ -160,14 +160,14 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Button
                 onClick={() => scrollToSection("projects")}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-inter"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-inter rounded-2xl"
               >
                 View Projects
               </Button>
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
-                className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-inter"
+                className="border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-inter rounded-2xl"
               >
                 Contact Me
               </Button>
