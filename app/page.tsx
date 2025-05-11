@@ -94,13 +94,13 @@ export default function Home() {
   },
   {
     id: 3,
-    title: "Smart BPO – AI Comment Prioritizer",
+    title: "Smart BPM – AI Prioritizer",
     description: "NLP-based sentiment and urgency classification for BPO workflows.",
     image: "/images/BPO.png",
     technologies: ["Sentiment Analysis", "NLP", "Workflow Automation"],
     category: "AI",
     link: "/projects/3",
-    github: "https://github.com/Rajkumar5723/SmartBPO",
+    github: "https://github.com/Rajkumar5723/SmartBPM",
   },
 ]
 
