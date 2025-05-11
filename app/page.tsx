@@ -290,7 +290,7 @@ export default function Home() {
           <div className="flex justify-center mt-12">
             <ScrollReveal delay={0.3}>
               <Link href="/projects">
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 font-inter">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 font-inter rounded-2xl">
                   View All Projects
                 </Button>
               </Link>
