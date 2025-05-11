@@ -141,7 +141,7 @@ export default function ProjectPage() {
     },
     {
       id: 3,
-      title: "Quantum BPO – AI Voice Assistant with Emotion-Priority Fusion",
+      title: "Smart BPM – AI Prioritizer",
       description: "Quantum BPO is a multilingual voice-based AI assistant designed for BPOs. It attends incoming calls, interacts with customers via speech, collects essential information, and applies Quantum Machine Learning to classify intent, detect emotions, and assign call priority. The system fuses audio-text features using quantum-enhanced layers for superior accuracy in prioritizing critical support queries.",
       image: "/images/BPO.png",
       technologies: [
@@ -154,7 +154,7 @@ export default function ProjectPage() {
       ],
       category: "AI",
       link: "#",
-      github: "https://github.com/Rajkumar5723/SmartBPO",
+      github: "https://github.com/Rajkumar5723/SmartBPM",
       gallery: [
         "/images/BPM-gallery1.png",
         "/images/BPO-gallery2.png",
@@ -236,7 +236,7 @@ export default function ProjectPage() {
     },
     {
       id: 5,
-      title: "Heart Disease Detection – Ensemble ML",
+      title: "Cardioneus - Heart Disease Detection",
       description:
         "An ensemble-based heart disease prediction model that employs Voting Classifier and Stacking methods for robust accuracy. Deployed with a Flask-powered dashboard, it visualizes patient health parameters in real time and guides clinical decisions.",
       image: "/images/Heart-gallery1.png?height=400&width=600",
@@ -252,7 +252,7 @@ export default function ProjectPage() {
       technologies: ["Healthcare", "Ensemble Learning", "Data Analytics", "Flask"],
       category: "Data",
       link: "#",
-      github: "https://github.com/Rajkumar5723/HeartDiseasePrediction",
+      github: "https://github.com/Rajkumar5723/CARDIONEXUS",
       keyFeatures: [
         "Multiple Base Learners – Combines Logistic Regression, Random Forest, XGBoost, and more.",
         "Flask Dashboard – Interactive interface for doctors and clinicians to assess patient risk levels.",
