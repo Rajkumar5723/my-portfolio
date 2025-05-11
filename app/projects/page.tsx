@@ -51,18 +51,18 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
-      title: "Smart BPO – AI Comment Prioritizer",
+      title: "Smart BPM – AI Prioritizer",
       description:
-        "Automates comment classification and sentiment analysis for BPO workflows. By automatically prioritizing urgent tickets and escalating critical cases, it cuts customer resolution times.",
+        "Automates speech classification and sentiment analysis for BPO workflows. By automatically prioritizing urgent tickets and escalating critical cases, it cuts customer resolution times.",
       image: "/images/BPO.png?height=400&width=600",
       technologies: ["Sentiment Analysis", "NLP", "Workflow Automation", "Python", "Flask"],
       category: "AI",
       link: "/projects/3",
-      github: "https://github.com/Rajkumar5723/SmartBPO",
+      github: "https://github.com/Rajkumar5723/SmartBPM",
     },
     {
       id: 4,
-      title: "Automatic Annotation – YOLOv11-Based Image Labeller",
+      title: "Automatic Annotation – Image Labeller",
       description:
         "A specialized system that auto-labels objects in images using YOLOv11-L, reaching 98% annotation accuracy. Drastically reduces manual labeling overhead for computer vision tasks.",
       image: "/images/Auto.png?height=400&width=600", // Update this if you have a new image
@@ -73,14 +73,14 @@ export default function ProjectsPage() {
     },
     {
       id: 5,
-      title: "Heart Disease Detection – Ensemble ML",
+      title: "Cardionexus - Heart Disease Prediction",
       description:
         "An ensemble-based heart disease prediction model that employs Voting Classifier and Stacking methods for robust accuracy. Deployed with a Flask-powered dashboard.",
       image: "/images/heart.png?height=400&width=600", // Update this if you have a new image
       technologies: ["Healthcare", "Ensemble Learning", "Data Analytics", "Flask"],
       category: "Data",
       link: "/projects/5",
-      github: "https://github.com/Rajkumar5723/HeartDiseasePrediction",
+      github: "https://github.com/Rajkumar5723/CARDIONEXUS",
     },
     {
       id: 6,
