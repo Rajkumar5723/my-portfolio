@@ -28,12 +28,23 @@ export default function ExpertiseSkillsSection() {
   const categories: SkillCategory[] = [
     {
       name: "Programming Languages",
-      skills: [{ name: "Python" }, { name: "SQL" }, { name: "R" }, { name: "C" }, { name: "Java" }],
+      skills: [
+        { name: "Python" },
+        { name: "SQL" },
+        { name: "R" },
+        { name: "C" },
+        { name: "Java" },
+      ],
       position: { row: 0, col: 0 },
     },
     {
       name: "Machine Learning",
-      skills: [{ name: "TensorFlow" }, { name: "PyTorch" }, { name: "Scikit-learn" }, { name: "Keras" }],
+      skills: [
+        { name: "TensorFlow" },
+        { name: "PyTorch" },
+        { name: "Scikit-learn" },
+        { name: "Keras" },
+      ],
       position: { row: 0, col: 1 },
     },
     {
@@ -50,7 +61,12 @@ export default function ExpertiseSkillsSection() {
     },
     {
       name: "Databases",
-      skills: [{ name: "MySQL" }, { name: "MongoDB" }, { name: "PostgreSQL" }, { name: "SQLite" }],
+      skills: [
+        { name: "MySQL" },
+        { name: "MongoDB" },
+        { name: "PostgreSQL" },
+        { name: "SQLite" },
+      ],
       position: { row: 1, col: 0 },
     },
     {
@@ -66,17 +82,30 @@ export default function ExpertiseSkillsSection() {
     },
     {
       name: "Big Data",
-      skills: [{ name: "Apache Spark" }, { name: "Hadoop" }, { name: "Kafka" }],
+      skills: [
+        { name: "Apache Spark" },
+        { name: "Hadoop" },
+        { name: "Kafka" },
+      ],
       position: { row: 1, col: 2 },
     },
     {
       name: "Web Technologies",
-      skills: [{ name: "HTML" }, { name: "CSS" }, { name: "JavaScript" }, { name: "Flask" }],
+      skills: [
+        { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+        { name: "Flask" },
+      ],
       position: { row: 2, col: 0 },
     },
     {
       name: "MLOps",
-      skills: [{ name: "MLflow" }, { name: "CI/CD Pipelines" }, { name: "Containerization" }],
+      skills: [
+        { name: "MLflow" },
+        { name: "CI/CD Pipelines" },
+        { name: "Containerization" },
+      ],
       position: { row: 2, col: 1 },
     },
     {
@@ -90,35 +119,31 @@ export default function ExpertiseSkillsSection() {
     },
   ]
 
-  // Group categories by row
-  const getRowCategories = (rowIndex: number) => {
-    return categories
-      .filter((category) => category.position.row === rowIndex)
+  const getRowCategories = (rowIndex: number) =>
+    categories
+      .filter((c) => c.position.row === rowIndex)
       .sort((a, b) => a.position.col - b.position.col)
-  }
 
   const row0 = getRowCategories(0)
   const row1 = getRowCategories(1)
   const row2 = getRowCategories(2)
 
-  // Special handling for Modern AI Techniques
   const handleModernAIHover = () => {
     setHoveredCategory("Modern AI Techniques")
     setModernAIHovered(true)
   }
-
   const handleModernAILeave = () => {
     setHoveredCategory(null)
     setModernAIHovered(false)
   }
 
-  if (!isClient) {
-    return null
-  }
+  if (!isClient) return null
 
   const renderCategory = (category: SkillCategory) => {
     const isModernAI = category.name === "Modern AI Techniques"
-    const isHovered = isModernAI ? modernAIHovered : hoveredCategory === category.name
+    const isHovered = isModernAI
+      ? modernAIHovered
+      : hoveredCategory === category.name
 
     return (
       <div key={category.name} className="relative">
@@ -128,9 +153,17 @@ export default function ExpertiseSkillsSection() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-gray-700 rounded-lg p-4 flex flex-wrap gap-2 justify-center items-center min-h-[60px] min-w-[240px] md:min-w-[200px]"
-            onMouseEnter={isModernAI ? handleModernAIHover : () => setHoveredCategory(category.name)}
-            onMouseLeave={isModernAI ? handleModernAILeave : () => setHoveredCategory(null)}
+            className="bg-gray-700 p-4 flex flex-wrap gap-2 justify-center items-center min-h-[60px] min-w-[240px] md:min-w-[200px] rounded-2xl"
+            onMouseEnter={
+              isModernAI
+                ? handleModernAIHover
+                : () => setHoveredCategory(category.name)
+            }
+            onMouseLeave={
+              isModernAI
+                ? handleModernAILeave
+                : () => setHoveredCategory(null)
+            }
           >
             {category.skills.map((skill) => (
               <motion.span
@@ -146,9 +179,17 @@ export default function ExpertiseSkillsSection() {
           </motion.div>
         ) : (
           <motion.div
-            onMouseEnter={isModernAI ? handleModernAIHover : () => setHoveredCategory(category.name)}
-            onMouseLeave={isModernAI ? handleModernAILeave : () => setHoveredCategory(null)}
-            className="px-6 py-3 rounded-full bg-gray-800 text-white min-w-[240px] md:min-w-[200px] flex justify-center items-center"
+            onMouseEnter={
+              isModernAI
+                ? handleModernAIHover
+                : () => setHoveredCategory(category.name)
+            }
+            onMouseLeave={
+              isModernAI
+                ? handleModernAILeave
+                : () => setHoveredCategory(null)
+            }
+            className="px-6 py-3 bg-gray-800 text-white min-w-[240px] md:min-w-[200px] flex justify-center items-center rounded-2xl"
             whileHover={{ scale: 1.05 }}
           >
             {category.name}
@@ -160,19 +201,20 @@ export default function ExpertiseSkillsSection() {
 
   return (
     <div className="w-full max-w-6xl mx-auto py-20">
-      <h2 className="text-4xl font-bold text-center mb-16 uppercase tracking-wider">EXPERTISE</h2>
-
+      <h2 className="text-4xl font-bold text-center mb-16 uppercase tracking-wider">
+        EXPERTISE
+      </h2>
       <div className="space-y-4 px-4">
-        {/* Row 0 */}
-        <div className="flex flex-wrap justify-center gap-4">{row0.map(renderCategory)}</div>
-
-        {/* Row 1 */}
-        <div className="flex flex-wrap justify-center gap-4">{row1.map(renderCategory)}</div>
-
-        {/* Row 2 */}
-        <div className="flex flex-wrap justify-center gap-4">{row2.map(renderCategory)}</div>
+        <div className="flex flex-wrap justify-center gap-4">
+          {row0.map(renderCategory)}
+        </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          {row1.map(renderCategory)}
+        </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          {row2.map(renderCategory)}
+        </div>
       </div>
     </div>
   )
 }
-
