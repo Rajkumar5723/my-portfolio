@@ -43,7 +43,7 @@ export default function InteractiveContact() {
 
     try {
       await emailjs.sendForm(
-        "service_cc7wkkq",        // 👈 Replace this
+        "service_cwtz66s",        // 👈 Replace this
         "template_vs1xjh6",
         formRef.current,
         "Xnno1IIcuOZkN6QrM"
