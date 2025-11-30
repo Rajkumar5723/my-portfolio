@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rajkumarg.vercel.app/sitemap.xml
